@@ -2,7 +2,7 @@ function binarySearch(arr = [], key) {
   var left = 0,
     right = arr.length - 1; // left index and right index of the array
   while (left <= right) {
-    var middle = Math.floor((right + left) / 2);
+    var middle = Math.floor( left +(right - left) / 2);
     if (arr[middle] == key) return middle;
     else if (key > arr[middle]) {
       left = middle + 1;
